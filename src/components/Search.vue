@@ -19,8 +19,8 @@ export default {
   methods: {
     async exe() {
       this.$emit("loadStart")
-      const { data } = await axios.get(`//itunes.apple.com.search?term=${ this.term }&country=jp&entity=musicVideo`);
-      this.$emit("loadComplate", { results: data.results })
+      const { data } = await axios.get(`//itunes.apple.com/search?term=${ this.term }&country=jp&entity=musicVideo`);
+      this.$emit("loadComplete", { results: data.results })
     },
   },
 };
