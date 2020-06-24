@@ -9,6 +9,7 @@
           <div class="content">
             <p><a class="track" :href="item.trackViewUrl" target="_blank">{{ item.trackName }}</a></p>
             <p><a class="artist" :href="item.artistViewUrl" target="_blank">{{ item.artistName }}</a></p>
+            <p><a class="preview" :href="item.previewUrl" target="_blank">プレビュー</a></p>
             <div class="data">{{ getYear(item.releaseDate) }} / {{ item.primaryGenreName }} /￥ {{item.trackPrice}}</div>
           </div>
         </div>
@@ -75,6 +76,14 @@ export default {
 .artist {
   display: block;
   color: #42b883;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.preview {
+  display: block;
+  color: #4275b8;
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
